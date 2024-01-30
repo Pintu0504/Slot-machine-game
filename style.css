@@ -33,7 +33,7 @@ body{
 
 }
 
-.slot{
+.slot {
     background-color: rgb(135, 235, 140);
     height: 200px;
     width: 300px;
@@ -42,17 +42,24 @@ body{
     text-align: center;
     font-size: 50px;
     line-height: 200px;
-
-    z-index: 1;
-
+    z-index: 0;
     overflow: hidden;
+    position: relative;
 }
 
-.slot>.value{
+.slot > .value {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
     z-index: 3;
     animation-name: slotspin;
     animation-iteration-count: infinite;
-    animation-duration: calc(1s / var(--speed));;
+    animation-duration: calc(1s / var(--speed));
+    top: 100%;
+    left: 40%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes slotspin{
